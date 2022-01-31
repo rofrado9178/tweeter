@@ -1,3 +1,6 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
 nav {
   background-color: #4056a1;
   color: #ffffff;
@@ -7,6 +10,7 @@ nav {
   justify-content: space-between;
   height: 120px;
   align-items: flex-end;
+  position: sticky;
 }
 
 nav .tweeter {
