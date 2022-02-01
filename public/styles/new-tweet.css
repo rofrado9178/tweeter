@@ -1,0 +1,13 @@
+.tweet-form {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", cursive;
+  margin: 15px 0px;
+}
+#tweet-text {
+  width: 100%;
+}
+.tweet-logo {
+  background-color: #4056a1;
+  color: #ffffff;
+}

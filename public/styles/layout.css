@@ -27,5 +27,8 @@ body {
  */
 main {
   width: 90%;
-  margin: 0px auto;
+  margin: 20px auto;
+}
+main .tweet-border {
+  border-bottom: 2px solid #545149;
 }
