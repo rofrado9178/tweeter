@@ -35,6 +35,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -46,7 +50,7 @@
         <div class="angle-down"><i class="fas fa-angle-double-down"></i></div>
       </div>
     </nav>
-    <header>
+    <header id="body-header">
       <div class="profile">
         <img src="/images/profile-hex.png" />
       </div>
@@ -70,10 +74,105 @@
           <div class="tweet-border"></div>
           <div class="tweet-form">
             <button type="submit" class="tweet-logo">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" for="tweet-text" id="tweet-count"
+              >140</output
+            >
           </div>
         </form>
       </section>
+      <!-- post display for every tweet -->
+      <article>
+        <div class="tweet-container">
+          <header>
+            <div class="name">
+              <img src="./images/lego.png" alt="lego-man" />
+              <p>Newton</p>
+            </div>
+            <p class="username">@Isacnewton</p>
+          </header>
+          <p class="tweet-content">
+            i have something to talk about, this is new tweet from other users
+          </p>
+          <div class="tweet-border"></div>
+          <footer>
+            <p>10 days ago</p>
+            <ul class="tweet-icons">
+              <li><i class="fas fa-flag"></i></li>
+              <li><i class="fas fa-retweet"></i></li>
+              <li><i class="fas fa-heart"></i></li>
+            </ul>
+          </footer>
+        </div>
+      </article>
+      <article>
+        <div class="tweet-container">
+          <header>
+            <div class="name">
+              <img src="./images/woman.png" alt="lego-man" />
+              <p>Ammy</p>
+            </div>
+            <p class="username">@Ammyadams</p>
+          </header>
+          <p class="tweet-content">
+            i have something to talk about, this is new tweet from other users
+          </p>
+          <div class="tweet-border"></div>
+          <footer>
+            <p>10 days ago</p>
+            <ul class="tweet-icons">
+              <li><i class="fas fa-flag"></i></li>
+              <li><i class="fas fa-retweet"></i></li>
+              <li><i class="fas fa-heart"></i></li>
+            </ul>
+          </footer>
+        </div>
+      </article>
+      <article>
+        <div class="tweet-container">
+          <header>
+            <div class="name">
+              <img src="./images/woman.png" alt="lego-man" />
+              <p>Ammy</p>
+            </div>
+            <p class="username">@Ammyadams</p>
+          </header>
+          <p class="tweet-content">
+            i have something to talk about, this is new tweet from other users
+          </p>
+          <div class="tweet-border"></div>
+          <footer>
+            <p>10 days ago</p>
+            <ul class="tweet-icons">
+              <li><i class="fas fa-flag"></i></li>
+              <li><i class="fas fa-retweet"></i></li>
+              <li><i class="fas fa-heart"></i></li>
+            </ul>
+          </footer>
+        </div>
+      </article>
+      <article>
+        <div class="tweet-container">
+          <header>
+            <div class="name">
+              <img src="./images/woman.png" alt="lego-man" />
+              <p>Ammy</p>
+            </div>
+            <p class="username">@Ammyadams</p>
+          </header>
+          <p class="tweet-content">
+            i have something to talk about, this is new tweet from other users
+          </p>
+          <div class="tweet-border"></div>
+          <footer>
+            <p>10 days ago</p>
+            <ul class="tweet-icons">
+              <li><i class="fas fa-flag"></i></li>
+              <li><i class="fas fa-retweet"></i></li>
+              <li><i class="fas fa-heart"></i></li>
+            </ul>
+          </footer>
+        </div>
+      </article>
     </main>
   </body>
 </html>

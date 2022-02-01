@@ -27,8 +27,14 @@ body {
  */
 main {
   width: 90%;
-  margin: 20px auto;
+  margin: 50px auto 30px;
+  position: relative;
 }
 main .tweet-border {
   border-bottom: 2px solid #545149;
+}
+body::before {
+  display: block;
+  content: "";
+  height: 120px;
 }

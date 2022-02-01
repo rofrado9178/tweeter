@@ -1,7 +1,7 @@
-* {
+/* * {
   border: 1px solid black;
-}
-header {
+} */
+#body-header {
   background-color: #d89b2a;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   height: 400px;
