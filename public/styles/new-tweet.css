@@ -33,7 +33,7 @@ section {
   color: #919191;
 }
 
-article {
+.tweet-container {
   margin-bottom: 40px;
 }
 
@@ -45,9 +45,6 @@ article:hover {
 }
 .name p {
   padding-left: 15px;
-}
-article img {
-  width: 12%;
 }
 
 .tweet-container {

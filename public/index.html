@@ -32,6 +32,12 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -39,6 +45,7 @@
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
     ></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -81,98 +88,7 @@
         </form>
       </section>
       <!-- post display for every tweet -->
-      <article>
-        <div class="tweet-container">
-          <header>
-            <div class="name">
-              <img src="./images/lego.png" alt="lego-man" />
-              <p>Newton</p>
-            </div>
-            <p class="username">@Isacnewton</p>
-          </header>
-          <p class="tweet-content">
-            i have something to talk about, this is new tweet from other users
-          </p>
-          <div class="tweet-border"></div>
-          <footer>
-            <p>10 days ago</p>
-            <ul class="tweet-icons">
-              <li><i class="fas fa-flag"></i></li>
-              <li><i class="fas fa-retweet"></i></li>
-              <li><i class="fas fa-heart"></i></li>
-            </ul>
-          </footer>
-        </div>
-      </article>
-      <article>
-        <div class="tweet-container">
-          <header>
-            <div class="name">
-              <img src="./images/woman.png" alt="lego-man" />
-              <p>Ammy</p>
-            </div>
-            <p class="username">@Ammyadams</p>
-          </header>
-          <p class="tweet-content">
-            i have something to talk about, this is new tweet from other users
-          </p>
-          <div class="tweet-border"></div>
-          <footer>
-            <p>10 days ago</p>
-            <ul class="tweet-icons">
-              <li><i class="fas fa-flag"></i></li>
-              <li><i class="fas fa-retweet"></i></li>
-              <li><i class="fas fa-heart"></i></li>
-            </ul>
-          </footer>
-        </div>
-      </article>
-      <article>
-        <div class="tweet-container">
-          <header>
-            <div class="name">
-              <img src="./images/woman.png" alt="lego-man" />
-              <p>Ammy</p>
-            </div>
-            <p class="username">@Ammyadams</p>
-          </header>
-          <p class="tweet-content">
-            i have something to talk about, this is new tweet from other users
-          </p>
-          <div class="tweet-border"></div>
-          <footer>
-            <p>10 days ago</p>
-            <ul class="tweet-icons">
-              <li><i class="fas fa-flag"></i></li>
-              <li><i class="fas fa-retweet"></i></li>
-              <li><i class="fas fa-heart"></i></li>
-            </ul>
-          </footer>
-        </div>
-      </article>
-      <article>
-        <div class="tweet-container">
-          <header>
-            <div class="name">
-              <img src="./images/woman.png" alt="lego-man" />
-              <p>Ammy</p>
-            </div>
-            <p class="username">@Ammyadams</p>
-          </header>
-          <p class="tweet-content">
-            i have something to talk about, this is new tweet from other users
-          </p>
-          <div class="tweet-border"></div>
-          <footer>
-            <p>10 days ago</p>
-            <ul class="tweet-icons">
-              <li><i class="fas fa-flag"></i></li>
-              <li><i class="fas fa-retweet"></i></li>
-              <li><i class="fas fa-heart"></i></li>
-            </ul>
-          </footer>
-        </div>
-      </article>
+      <div id="tweets-cointainer"></div>
     </main>
   </body>
 </html>
