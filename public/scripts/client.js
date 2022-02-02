@@ -30,16 +30,16 @@ const tweetsData = [
   },
 ];
 
-const renderTweets = function (tweets) {
-  for (const key in tweets) {
-    let $tweet = createTweetElement(tweets[key]);
-    $("#tweets-cointainer").append($tweet);
-  }
-};
+$(document).ready(function () {
+  const renderTweets = function (tweets) {
+    for (const key in tweets) {
+      let $tweet = createTweetElement(tweets[key]);
+      $("#tweets-cointainer").append($tweet);
+    }
+  };
 
-const createTweetElement = (tweet) => {
-  const date = timeago.format(tweet.created_at);
-  let $tweet = `
+  const createTweetElement = (tweet) => {
+    let $tweet = `
   <article>
   <div class="tweet-container">
     <header>
@@ -54,7 +54,7 @@ const createTweetElement = (tweet) => {
     </p>
     <div class="tweet-border"></div>
     <footer>
-      <p>${date}</p>
+      <p>${timeago.format(tweet.created_at)}</p>
       <ul class="tweet-icons">
         <li><i class="fas fa-flag"></i></li>
         <li><i class="fas fa-retweet"></i></li>
@@ -65,12 +65,7 @@ const createTweetElement = (tweet) => {
 </article>
   
   `;
-  return $tweet;
-};
-
-// const $tweet = createTweetElement(tweetData);
-// console.log($tweet);
-// $("#tweets-container").append($tweet);
-$(document).ready(function () {
+    return $tweet;
+  };
   renderTweets(tweetsData);
 });
