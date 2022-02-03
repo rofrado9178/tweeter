@@ -28,7 +28,30 @@ nav .write-tweet {
   align-items: center;
   flex-direction: column;
 }
-.angle-down {
+.fa-angle-double-down {
   display: flex;
   justify-content: center;
+}
+
+.write-tweet:hover > .fa-angle-double-down {
+  animation-name: wigle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: relative;
+  color: rgb(227, 51, 51);
+}
+
+@keyframes wigle {
+  0% {
+    top: 5px;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 5px;
+  }
+  75% {
+    top: 0px;
+  }
 }

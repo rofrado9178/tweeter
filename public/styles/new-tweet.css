@@ -6,6 +6,19 @@ section {
   padding: 10px;
   margin-bottom: 40px;
 }
+
+#warning {
+  border: 3px solid red;
+  color: red;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  display: none;
+}
+.new-tweet {
+  display: block;
+}
+
 .tweet-form {
   display: flex;
   justify-content: space-between;
@@ -24,6 +37,10 @@ section {
 .tweet-logo {
   background-color: #4056a1;
   color: #ffffff;
+}
+.tweet-logo:hover {
+  background: #3b539f;
+  border: 5px solid #6f90f9;
 }
 .count-color {
   color: red;

@@ -32,12 +32,18 @@
 
 //document ready so any javascript will be executed after all html file loaded
 $(document).ready(function () {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   //function that will append new tweet to the last child of element
   const renderTweets = function (tweets) {
+    $("#tweets-container").empty();
     //loop through the tweet data and append to element container
     for (const key in tweets) {
       let $tweet = createTweetElement(tweets[key]);
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
@@ -54,7 +60,7 @@ $(document).ready(function () {
       <p class="username">${tweet.user.handle}</p>
     </header>
     <p class="tweet-content">
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
     </p>
     <div class="tweet-border"></div>
     <footer>
@@ -75,7 +81,7 @@ $(document).ready(function () {
   //send get request from tweets path and render it
   const loadTweets = () => {
     $.ajax({
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       type: "GET",
       success: function (data) {
         renderTweets(data);
@@ -92,21 +98,45 @@ $(document).ready(function () {
     event.preventDefault();
 
     //condition check if tweet is empty or more than max char
-    const data = $(this).serialize();
-    if (data !== "" || data !== null || data.length > 140) {
-      return alert("Cannot Submit tweet");
+    const serializeData = $(this).serialize();
+    const tweetLength = $("#tweet-text").val().length;
+    const exceedChar = `<p>
+    <i class="fas fa-exclamation-triangle"></i> Your tweet cannot exceed
+    more than 140 characters
+    <i class="fas fa-exclamation-triangle"></i>
+  </p>`;
+    const emptyString = ` <p>
+  <i class="fas fa-exclamation-triangle"></i> Your tweet cannot be an
+  empty characters
+  <i class="fas fa-exclamation-triangle"></i>
+</p>`;
+
+    const warning = function (addclass) {
+      $("#warning").slideUp(1000, function () {
+        $("#warning").empty();
+        $("#warning").append(addclass);
+      });
+      $("#warning").slideDown(1500);
+    };
+
+    if (tweetLength > 140) {
+      warning(exceedChar);
+    } else if ($("#tweet-text").val() === "") {
+      warning(emptyString);
     }
     //if condtion is true
-    $.ajax({
-      url: "http://localhost:8080/tweets",
-      type: "POST",
-      data: data,
-      success: function (data) {
-        console.log(data);
-      },
-      error: function (err) {
-        return err;
-      },
-    });
+    else {
+      $.post("/tweets", serializeData, function (data) {
+        $("#tweet-text").val("").empty();
+        $("#tweet-count").val(140);
+        $("#warning").slideUp();
+        loadTweets();
+      });
+    }
+  });
+
+  //toogle write post effect ---- stretch
+  $(".write-tweet").click(function () {
+    $(".new-tweet").toggle("slow");
   });
 });
