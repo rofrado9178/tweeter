@@ -52,6 +52,10 @@ section {
 
 .tweet-container {
   margin-bottom: 40px;
+  border: 2px solid black;
+  padding: 20px 25px 0px;
+  overflow: auto;
+  width: 100%;
 }
 
 article:hover {
@@ -62,11 +66,6 @@ article:hover {
 }
 .name p {
   padding-left: 15px;
-}
-
-.tweet-container {
-  border: 2px solid black;
-  padding: 20px 25px 0px;
 }
 
 .username {
@@ -80,6 +79,8 @@ article header {
 
 .tweet-content {
   font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 article footer {
   display: flex;
@@ -99,4 +100,28 @@ article footer {
 }
 .tweet-icons li {
   margin: 0px 10px;
+}
+
+@media only screen and (max-width: 454px) {
+  .tweet-container header {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  #body-header {
+    width: 30%;
+    margin: 15rem 1rem 0 1rem;
+    position: relative;
+    margin-left: 5rem;
+  }
+  main {
+    width: 60%;
+    margin-top: 8rem;
+    position: relative;
+    padding-left: 8rem;
+  }
 }
