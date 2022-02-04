@@ -1,6 +1,8 @@
 $(document).ready(function () {
   // --- our code goes here ---
-  $("#tweet-text").keyup(function (event) {
+
+  //add event listener for the text area and count the characters
+  $("#tweet-text").keyup(function () {
     const tweetCount = this.value.length;
     const maxChar = 140;
 

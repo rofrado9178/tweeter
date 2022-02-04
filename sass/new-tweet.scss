@@ -2,13 +2,12 @@ main {
   /* border: 3px solid red; */
   padding: 10px;
 }
-
 section {
   padding: 10px;
   margin-bottom: 40px;
 }
-
 /* error message */
+
 #warning {
   border: 3px solid red;
   color: red;
@@ -17,7 +16,6 @@ section {
   font-size: 40px;
   display: none;
 }
-
 /* compse tweet area */
 .new-tweet {
   display: block;
@@ -29,7 +27,6 @@ section {
   font-family: "Bungee", cursive;
   margin: 15px 0px;
 }
-
 #tweet-text {
   width: 100%;
   background: transparent;
@@ -39,21 +36,17 @@ section {
   resize: none;
   font-weight: 600;
 }
-
 .tweet-logo {
   background-color: #4056a1;
   color: #ffffff;
 }
-
 .tweet-logo:hover {
   background: #3b539f;
   border: 5px solid #6f90f9;
 }
-
 .count-color {
   color: red;
 }
-
 .tweet-submit {
   background-color: #192343;
   color: #919191;
@@ -71,12 +64,10 @@ section {
 article:hover {
   box-shadow: 8px 8px 3px #c9cae2;
 }
-
 /* tweet display header */
 .name {
   display: flex;
 }
-
 .name p {
   padding-left: 15px;
 }
@@ -85,12 +76,10 @@ article:hover {
   color: #c3c3e3;
   font-weight: 600;
 }
-
 article header {
   display: flex;
   justify-content: space-between;
 }
-
 /* tweet display body */
 .tweet-content {
   font-weight: 600;
@@ -105,7 +94,6 @@ article footer {
   padding: 0px 10px;
   font-size: 20px;
 }
-
 .tweet-icons {
   display: flex;
   list-style-type: none;
@@ -113,11 +101,9 @@ article footer {
   color: #4056a1;
   font-size: 18px;
 }
-
 .tweet-icons :hover {
   color: #d89b2a;
 }
-
 .tweet-icons li {
   margin: 0px 10px;
 }
@@ -128,18 +114,17 @@ article footer {
     flex-direction: column;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
   }
-
   #body-header {
     width: 30%;
     margin: 15rem 1rem 0 1rem;
     position: relative;
     margin-left: 5rem;
   }
-
   main {
     width: 60%;
     margin-top: 8rem;

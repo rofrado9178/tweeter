@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const tweetsData = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac",
-//     },
-//     "content": {
-//       "text":
-//         "If I have seen further it is by standing on the shoulders of giants",
-//     },
-//     "created_at": 1643552739858,
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd",
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis",
-//     },
-//     "created_at": 1643639139858,
-//   },
-// ];
-
 //document ready so any javascript will be executed after all html file loaded
 $(document).ready(function () {
   const escape = function (str) {
@@ -48,7 +22,7 @@ $(document).ready(function () {
   };
 
   //create element of the tweet
-  const createTweetElement = (tweet) => {
+  const createTweetElement = function (tweet) {
     let $tweet = `
   <article>
   <div class="tweet-container">
@@ -79,7 +53,7 @@ $(document).ready(function () {
   };
 
   //send get request from tweets path and render it
-  const loadTweets = () => {
+  const loadTweets = function () {
     $.ajax({
       url: "/tweets",
       type: "GET",
@@ -100,6 +74,7 @@ $(document).ready(function () {
     //condition check if tweet is empty or more than max char
     const serializeData = $(this).serialize();
     const tweetLength = $("#tweet-text").val().length;
+    //text that will be print on error message
     const exceedChar = `<p>
     <i class="fas fa-exclamation-triangle"></i> Your tweet cannot exceed
     more than 140 characters
@@ -110,7 +85,7 @@ $(document).ready(function () {
   empty characters
   <i class="fas fa-exclamation-triangle"></i>
 </p>`;
-
+    //show error message if textarea is empty string or exceed max chars
     const warning = function (addclass) {
       $("#warning").slideUp(1000, function () {
         $("#warning").empty();
@@ -138,5 +113,6 @@ $(document).ready(function () {
   //toogle write post effect ---- stretch
   $(".write-tweet").click(function () {
     $(".new-tweet").toggle("slow");
+    $("#tweet-text").focus();
   });
 });
