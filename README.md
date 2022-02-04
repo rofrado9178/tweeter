@@ -2,11 +2,15 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This is my front-end project as a LighthouseLabs bootcampt student,for the purpose of practice HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express back-end skills.
+This is my front-end project as a LighthouseLabs bootcamp student,for the purpose of practice HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express back-end skills.
 
 ## Final Product
 
-!["screenshot description"]
+!["Main page with desktop layout"](https://github.com/rofrado9178/tweeter/blob/master/docs/tweet1.png)
+!["Showing Error message if maximum characters exceed"](https://github.com/rofrado9178/tweeter/blob/master/docs/tweet2.png)
+!["mobile and tablet layout"](https://github.com/rofrado9178/tweeter/blob/master/docs/tweet3.png)
+!["tweet display in mobile layout"](https://github.com/rofrado9178/tweeter/blob/master/docs/tweet4.png)
+!["Error message when submit empty text "](https://github.com/rofrado9178/tweeter/blob/master/docs/tweet5.png)
 
 ## Getting Started
 
